@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Neucha&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    scroll-behavior:smooth;
+}
+a{
+    color: black;
+}
+ul,li{
+    text-decoration: none;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'Neucha', cursive;
+}
+    /*СКРОЛЛ БАР*/
+::-webkit-scrollbar-button {
+    background-image:url('');
+    background-repeat:no-repeat;
+    width:5px;
+    height:0px
+    }
+    
+    ::-webkit-scrollbar-track {
+    background-color:black;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color:#969696;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover{
+    background-color:red;
+    }
+    
+    ::-webkit-resizer{
+    background-image:url('');
+    background-repeat:no-repeat;
+    width:4px;
+    height:0px
+    }
+    
+    ::-webkit-scrollbar{
+    width: 10px;
+    }
+
+img{
+    pointer-events: none;
+    -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+header{
+    max-width: 100vw;
+    height: 100vh;
+    background-image: url('https://cdnb.artstation.com/p/assets/images/images/000/337/287/large/denys-tsiperko-street.jpg?1443927013');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -1;
+}
+.center_text{
+    text-align: center;
+    
+}
+.center_text p{
+    font-size: 150px;
+    color: white;
+    opacity: 0;
+    overflow: hidden;
+    position: relative;
+}
+.center_text p:nth-child(1){
+    font-size: 150px;
+    color: white;
+    opacity: 0;
+    overflow: hidden;
+    background: linear-gradient(to right, red, red 50%, silver 50%);
+    background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+
+    animation-name: big_name;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+    z-index: 2;
+}
+.center_text p:nth-child(1):hover{
+    background-position: 0 100%;
+}
+@keyframes big_name{
+    0%{
+        color: white;
+    }
+    50%{
+        opacity: 1;
+        font-size: 150px;
+        color: white;
+    }
+    100%{
+        font-size: 90px;
+        opacity: 1;
+        color: silver;
+    }
+}
+.center_text p:nth-child(2){
+    font-size: 60px;
+
+    animation-name: small_name;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.7s;
+    z-index: 2;
+}
+@keyframes small_name{
+    0%{
+
+    }
+    100%{
+        opacity: 1;
+        color: silver;
+    }
+}
+.man{
+    position: absolute;
+    width: 4%;
+    margin-top: -36%;
+    filter: brightness(0%);
+    display: block;
+    
+    animation-name: man;
+    animation-duration: 0.9s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.440, -0.005, 0.225, 1.335);
+
+    -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.man_1{
+    margin-top: -16%;
+
+    animation-name: man_1;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-duration: 5s;
+} 
+@keyframes man_1{
+    0%{
+        margin-top: -16%;
+        transform: translateX(0px);
+    }
+    30%{
+        transform: translateX(50px) rotate(-2deg);
+    }
+    50%{
+        
+    }
+    70%{
+        transform: translateX(-50px) rotate(2deg);
+    }
+    100%{
+        transform: translateX(0px) rotate(0deg);
+    }
+}
+@keyframes man{
+    0%{
+
+    }
+    100%{
+        margin-top: -16%;
+    }
+}
+.knife{
+    position: absolute;
+    width: 7%;
+    filter: brightness(70%);
+    margin-top: -55%;
+    margin-left: 30%;
+
+    animation-name: s;
+    animation-duration: 0.7s;
+    animation-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+@keyframes knife{
+    0%{
+
+    }
+    100%{
+        margin-top: 23%;
+        transform: rotate(5deg);
+    }
+}
+.pod_header{
+    max-width: 100vw;
+    height: 100%;
+    background: #0d0d0d;
+    z-index: 1;
+    position: relative;
+    border-top: 10px solid black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+.pod_header div{
+    width: 33.333%;
+    height: 100%;
+    color: silver;
+    font-size: 40px;
+}
+.pod_header div:nth-child(1){
+    margin: 50px;
+    /*transform: translateX(-150%);*/
+    opacity: 0;
+    /*transition: 0.5s ease;*/
+    transform: translate(-150px,-150px);
+}
+.pod_header div:nth-child(2){
+    text-align: center;
+    height: 100%;
+}
+.pod_header div:nth-child(3){
+    text-align: right;
+    margin: 50px;
+    /*transform: translateX(200%);*/
+    opacity: 0;
+    /*transition: 1s ease;*/
+    width: 70%;
+    display: flex;
+    transform: translate(150px,150px);
+}
+.pod_header div:nth-child(3) p{
+    margin-left: 150px;
+}
+.pod_header div:nth-child(3) img{
+    max-width: 30%;
+    margin-top: -100px;
+}
+.face{
+    max-width: 100%;
+    filter: brightness(80%);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 1.5s ease;
+}
+.block_1{
+    max-width: 100vw;
+    height: 100vh;
+    background: #0d0d0d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: 2s ease;
+    z-index: 2;
+}
+.door{
+    width: 300px;
+    height: 600px;
+    border: 15px solid #381806;
+    perspective: 400px;
+    overflow: hidden;
+    background: black;
+    cursor: pointer;
+    transition: 2s ease;
+}
+.enter_door{
+    width: inherit;
+    height: inherit;
+    background: #241005;
+    display: flex;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: 0.3s;
+}
+.enter_door span{
+    width: 30px;
+    height: 30px;
+    background: #4f0c0c;
+    display: block;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+.enter_door img{
+    max-width: 60%;
+    margin-top: -120px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.door:hover .enter_door{
+    transform: /*rotateY(-60deg) translateZ(-80px)*/rotateY(-30deg) translateZ(-10px);
+    transition: 0.3s;
+}
+.door:hover .enter_door img{
+    opacity: 1;
+    transition: 0.3s;
+}
+.block_1 p{
+    font-size: 80px;
+    margin-bottom: 20px;
+    opacity: 0;
+
+    overflow: hidden;
+    background: linear-gradient(to right, red, red 50%, silver 50%);
+    background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+}
+.block_1 p:hover{
+    background-position: 0 100%;
+}
+.close_block{
+    max-width: 100vw;
+    background-image: url('https://cutewallpaper.org/21/black-brick-wall-background/Black-Brick-Wall-Background-dark-Elevate-Trampoline-Park.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    height: 50px;
+    overflow: hidden;
+    /*transition: 1s;*/
+    z-index: 22;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.close_block div{
+    width: 33.333%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.close_block div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body{
+    width: 50%;
+}
+.close_block p{
+    text-decoration:line-through;
+    color: red;
+    transition: 1s;
+    font-size: 70px;
+}
+.close_block div:nth-child(1) p:nth-child(1){
+    transform: translateX(400px) translateY(-100px);
+}
+.close_block div:nth-child(1) p:nth-child(2){
+    transform: translateX(300px);
+}
+.close_block div:nth-child(3) p:nth-child(1){
+    transform: translateX(-300px) translateY(150px);
+}
+.hends{
+    opacity: 0;
+}
